@@ -51,8 +51,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
-const PORT = process.env.PORT || 3010;
+let PORT = process.env.PORT || 3009;
 
-app.listen(PORT, function () {
-    console.log('started on: ', this.address().port);
+app.listen(PORT, function(){
+  console.log('App starting on port', PORT);
 });
