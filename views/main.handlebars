@@ -1,27 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+<body>
 <h1>Car Api Widget</h1>
 
-
-<h4>Car Info</h4>
-
-<ul>
-    {{#each cars}}
-        <li>{{this.make}}</li>
-    {{/each}}
-</ul>
-
-
-<h4>Brands</h4>
-
-<ul>
-    {{#each cars}}
-        <li>{{this.model}}</li>
-    {{/each}}
-</ul>
-
-<h4>Color</h4>
-
-<ul>
-    {{#each cars}}
-        <li>{{this.color}}</li>
-    {{/each}}
-</ul>
+<div style="width: 100%;">
+	<table class="zui-table">
+    <thead>
+        <tr>
+    <th>Car Info</th>
+    <th>Brands</th>
+    <th>Color</th>
+  </tr>
+    </thead>
+    <tbody>
+        {{#each cars}}
+       <tr>
+           <td> 
+        {{this.make}}
+    </td>
+        <td>
+        {{this.model}}
+        </td>
+        <td>
+        {{this.color}}
+        </td>
+    </tr>
+     {{/each}}
+    </tbody>
+</table>
+</div>
+</body>
+</html>
